@@ -32,7 +32,7 @@ diagrama esquematico
 
 ## Hack
 
-Para esto eliminamos el microcontrolador [EM78P153A](res/EM78P153A-ELANMicroelectronics.pdf) y lo reemplazamos por el [ATtiny85](res/ATtiny85.pdf). Este procesador tiene menos pines por lo tanto sacrificamos las opciones de seleccion de tiempo y solo permitimos dos estados, off y automatico, definiendo el tiempo automatico internamente en el microcontrolador (en este caso cada 1 hora) y permitiendo la activacion manual del spray tanto en off como en automático.
+Para esto eliminamos el microcontrolador [EM78P153A](res/EM78P153A-ELANMicroelectronics.pdf) y lo reemplazamos por el [ATtiny85](res/atmel-2586-avr-8-attiny85_datasheet.pdf). Este procesador tiene menos pines por lo tanto sacrificamos las opciones de seleccion de tiempo y solo permitimos dos estados, off y automatico, definiendo el tiempo automatico internamente en el microcontrolador (en este caso cada 1 hora) y permitiendo la activacion manual del spray tanto en off como en automático.
 
 El diagrama es el sig:
 
@@ -41,11 +41,11 @@ El diagrama es el sig:
 ![glade](res/20250622_230739.jpg)
 ![glade](res/20250623_005728.jpg)
 
-> es importante destacar que los parametros `TUNE_DELAY_LOOP_2_COUNT_TO_1MS` y `TUNE_WDT_REAL_TICK_TIME_IN_SEC`, deben ser afinados de forma manual tras prueba y error o con un osciloscopio, ya que el oscilador interno del [ATtiny85](res/ATtiny85.pdf) no es muy preciso y tiene un % de fallo de fabrica - a menos que uses un oscilador interno.
+> es importante destacar que los parametros `TUNE_DELAY_LOOP_2_COUNT_TO_1MS` y `TUNE_WDT_REAL_TICK_TIME_IN_SEC`, deben ser afinados de forma manual tras prueba y error o con un osciloscopio, ya que el oscilador interno del [ATtiny85](res/atmel-2586-avr-8-attiny85_datasheet.pdf) no es muy preciso y tiene un % de fallo de fabrica - a menos que uses un oscilador interno.
 
 ### Programación
 
-El código fuente fue creado para el [ATtiny85](res/ATtiny85.pdf) y compilado con `avr-gcc`, diseñado para bajo consumo de energía por lo que se estableció el clock interno a 128kHz y para aprovechar el pin 1 (RESET) como gpio se activó el fuse RSTDISBL - asi que ten cuidado cuando lo actives ya que no podras volver a programar el microcontrolador a menos que desactives ese fuse con un programador de alto voltaje HVSP. tambien puede hacerlo con un arduino https://www.rickety.us/2010/03/arduino-avr-high-voltage-serial-programmer/.
+El código fuente fue creado para el [ATtiny85](res/atmel-2586-avr-8-attiny85_datasheet.pdf) y compilado con `avr-gcc`, diseñado para bajo consumo de energía por lo que se estableció el clock interno a 128kHz y para aprovechar el pin 1 (RESET) como gpio se activó el fuse RSTDISBL - asi que ten cuidado cuando lo actives ya que no podras volver a programar el microcontrolador a menos que desactives ese fuse con un programador de alto voltaje HVSP. tambien puede hacerlo con un arduino https://www.rickety.us/2010/03/arduino-avr-high-voltage-serial-programmer/.
 
 los pasos para compilar y grabar serian algo asi:
 
