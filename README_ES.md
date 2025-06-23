@@ -1,4 +1,4 @@
-# Custom Glade Automatic Air Freshener ([view in Spanish](README.md))
+# Custom Glade Automatic Air Freshener ([see in English](README.md))
 
 Glade Automatic Air Freshener, es un producto electronico que activa un spray ambiental automaticamente entre 9, 18 o 36 minutos, estos tiempos son fijos y no se pueden cambiar. Este hack permite crear tu propia logica de funcionamiento y establecer el tiempo de activación que tu quieras. la misma base tambien puede ser usada para control remoto agregando algun dispositivo bluetooth o similar.
 
