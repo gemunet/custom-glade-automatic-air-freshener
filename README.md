@@ -1,6 +1,6 @@
 # Custom Glade Automatic Air Freshener ([ver en Español](README_ES.md))
 
-The Glade Automatic Air Freshener is an electronic product that automatically activates an air spray every 9, 18, or 36 minutes. These time intervals are fixed and cannot be changed. This hack allows you to create your own logic and set any activation time you want. The same base can also be used for remote control by adding a Bluetooth device or similar.
+The Glade Automatic Air Freshener is an electronic product that automatically activates an air spray every 9, 18, or 36 minutes. These time intervals are fixed and cannot be changed. This hack allows you to create your own logic and set any activation time you want. The same base can also be used for remote control by adding a Bluetooth device or similar. You can also add a light sensor so that it only works during the day.
 
 ![glade](res/20250623_152617.jpg)
 ![glade](res/20250623_010030.jpg)
